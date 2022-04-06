@@ -2,13 +2,17 @@ This is a repo for the ENCOR 350-401 Cisco Certification Exam
 
 ## PART 1 Python Crash Course
 
-Optional: IDE Configuration.
-1 Read https://realpython.com/python-first-steps/ and do the excercise:
+0. [Optional] IDE Configuration.
+
+1. Read the [python first steps](https://realpython.com/python-first-steps/) and:
     - Solve the python_first_steps_excercises.py
     - Do all loop_excercises.py 
-2 Functions (Read the first 6 points) https://towardsdatascience.com/python-for-beginners-functions-2e4534f0ae9d and https://www.geeksforgeeks.org/args-kwargs-python/ do the excercise:
+
+2. Read the first 6 points of [Functions for begginers](https://towardsdatascience.com/python-for-beginners-functions-2e4534f0ae9d) and all [functions with undertimed parameters](https://www.geeksforgeeks.org/args-kwargs-python/) and:
     - Do all input_print_functions_excercises.py
-3 Import and modules https://www.programiz.com/python-programming/modules
-4 Main function. https://realpython.com/python-main-function/
+
+3. Read the introductions of [import and modules](https://www.programiz.com/python-programming/modules).
+
+4. Understand the use of the [Main function](https://realpython.com/python-main-function/)
 
 ## PART 2 Netmiko vs Paramiko
