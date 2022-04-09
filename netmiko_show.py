@@ -4,12 +4,20 @@ from netmiko import ConnectHandler
 # logger = logging.getLogger("netmiko")
 
 
-gns3_router = {
+gns3_ios_router = {
     'device_type': 'cisco_ios',
-    'host': '192.168.122.144',
+    'host': '192.168.122.140',
     'username': 'devnet',
     'password': 'devnet',
     'secret': 'devnet',
+    'port': 22
+}
+
+gns3_junos_vsrx = {
+    'device_type': 'juniper_junos',
+    'host': '192.168.122.150',
+    'username': 'devnet',
+    'password': 'Devnet',
     'port': 22
 }
 
