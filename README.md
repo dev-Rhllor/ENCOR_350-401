@@ -8,11 +8,9 @@ This is a repo for the ENCOR 350-401 Cisco Certification Exam
     - Solve the python_first_steps_excercises.py
     - Do all loop_excercises.py 
 
-2. Read the first 6 points of [Functions for begginers](https://towardsdatascience.com/python-for-beginners-functions-2e4534f0ae9d) and all [functions with undertimed parameters](https://www.geeksforgeeks.org/args-kwargs-python/) and:
+2. Read the first 6 points of [Functions for begginers](https://towardsdatascience.com/python-for-beginners-functions-2e4534f0ae9d) and all [functions with not-defined amount of arguments](https://www.geeksforgeeks.org/args-kwargs-python/) and:
     - Do all input_print_functions_excercises.py
 
 3. Read the introductions of [import and modules](https://www.programiz.com/python-programming/modules).
 
 4. Understand the use of the [Main function](https://realpython.com/python-main-function/)
-
-## PART 2 Netmiko vs Paramiko
