@@ -1,7 +1,7 @@
 import paramiko
 import re
 # from inventory import gns3_ios_router
-from inventory import sandbox
+from inventory import gns3_ios_router
 
 
 def main():
@@ -9,10 +9,10 @@ def main():
 
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(hostname=sandbox['host'],
-                username=sandbox['username'],
-                password=sandbox['password'],
-                port=sandbox['port'],
+    ssh.connect(hostname=gns3_ios_router['host'],
+                username=gns3_ios_router['username'],
+                password=gns3_ios_router['password'],
+                port=gns3_ios_router['port'],
                 look_for_keys=False,
                 allow_agent=False)
 
