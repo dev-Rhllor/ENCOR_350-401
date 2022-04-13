@@ -26,15 +26,15 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - inventory.py
 3. Open the **paramiko_show.py** script and:
     - Identify their building components.
-    - Run it against the CISCO device.
+    - Run it against the ios_router device.
 4. Open the **netmiko_show.py** script and:
     - Identify their building components.
-    - Run it against the CISCO device.
-    - Run it against the JUNOS device.
+    - Run it against the ios_router device.
+    - Run it against the junos_vsrx device.
     - Compare outputs. 
 5. Open the **napalm_show.py** script and:
     - Identify their building components.
-    - Run it against the CISCO device.
-    - Run it against the JUNOS device.
+    - Run it against the ios_router device.
+    - Run it against the junos_vsrx device.
     - Compare outputs. 
 
