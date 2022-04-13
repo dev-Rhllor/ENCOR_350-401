@@ -1,14 +1,11 @@
 from netmiko import ConnectHandler
 from netmiko import NetmikoTimeoutException
-# import logging
-# logging.basicConfig(filename='netmiko_global.log', level=logging.DEBUG)
-# logger = logging.getLogger("netmiko")
 
 
 def main():
     sandbox_router = {
         'device_type': 'cisco_ios',
-        'host': '192.168.122.144',
+        'host': '192.168.122.140',
         'username': 'devnet',
         'password': 'devnet',
         'secret': 'devnet',

@@ -1,35 +1,37 @@
 import paramiko
 import re
+# from inventory import gns3_ios_router
+from inventory import sandbox
 
-sandbox = {
-    'host': '10.10.20.48',
-    'username': 'developer',
-    'password': 'C1sco12345',
-    'port': 22
-}
-command = 'show ip interface brief \n'
 
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(hostname=sandbox['host'],
-            username=sandbox['username'],
-            password=sandbox['password'],
-            port=sandbox['port'],
-            look_for_keys=False,
-            allow_agent=False)
+def main():
+    command = 'show ip interface brief \n'
 
-stdin, stdout, stderr = ssh.exec_command(command)
-output = stdout.readlines()
-print(" ".join(output))
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(hostname=sandbox['host'],
+                username=sandbox['username'],
+                password=sandbox['password'],
+                port=sandbox['port'],
+                look_for_keys=False,
+                allow_agent=False)
 
-regex = re.compile('(?P<interface>\S+) +(?P<ip>\S+) +\S+ +\S+ +\S+')
-result = []
+    stdin, stdout, stderr = ssh.exec_command(command)
+    output = stdout.readlines()
+    print(" ".join(output))
 
-for line in output:
-    match = regex.search(line)
-    if match:
-        result.append(match.groupdict())
+    regex = re.compile('(?P<interface>\S+) +(?P<ip>\S+) +\S+ +\S+ +\S+')
+    result = []
 
-print(result)
-ssh.close()
-del ssh, stdin, stdout, stderr
+    for line in output:
+        match = regex.search(line)
+        if match:
+            result.append(match.groupdict())
+
+    print(result)
+    ssh.close()
+    del ssh, stdin, stdout, stderr
+
+
+if __name__ == "__main__":
+    main()

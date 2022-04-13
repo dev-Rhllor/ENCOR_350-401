@@ -1,36 +1,18 @@
 from netmiko import ConnectHandler
-# import logging
-# logging.basicConfig(filename='netmiko_global.log', level=logging.DEBUG)
-# logger = logging.getLogger("netmiko")
+from inventory import gns3_ios_router
+# from inventory import gns3_junos_vsrx
 
 
-gns3_ios_router = {
-    'device_type': 'cisco_ios',
-    'host': '192.168.122.140',
-    'username': 'devnet',
-    'password': 'devnet',
-    'secret': 'devnet',
-    'port': 22
-}
+def main():
+    cisco_command = 'show ip interface brief'
+    # junos_command = 'show interface'
+    device_connection = ConnectHandler(**gns3_ios_router)
+    device_ip = device_connection.send_command(cisco_command)
+    print(device_ip)
 
-gns3_junos_vsrx = {
-    'device_type': 'juniper_junos',
-    'host': '192.168.122.150',
-    'username': 'devnet',
-    'password': 'Devnet',
-    'port': 22
-}
+    device_ip_parsed = device_connection.send_command(cisco_command, use_textfsm=True)
+    print(device_ip_parsed)
 
-sandbox = {
-    'host': '10.10.20.48',
-    'device_type': 'cisco_ios',
-    'username': 'developer',
-    'password': 'C1sco12345',
-    'port': 22
-}
 
-sandbox_connection = ConnectHandler(**sandbox)
-sandbox_ip = sandbox_connection.send_command('show ip interface brief')
-print(sandbox_ip)
-sandbox_ip_parsed = sandbox_connection.send_command('show ip interface brief', use_textfsm=True)
-print(sandbox_ip_parsed)
+if __name__ == "__main__":
+    main()
