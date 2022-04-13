@@ -1,3 +1,5 @@
+# vSRX 19.2R1.8
+
 groups {
     global {
         system {
