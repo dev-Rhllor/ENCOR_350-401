@@ -4,7 +4,7 @@ from inventory import gns3_junos_vsrx
 
 
 def main():
-    driver = get_network_driver("junos")
+    driver = get_network_driver("junos") # "junos" for Juniper, "ios" for cisco 
     device = driver(hostname=gns3_junos_vsrx['host'],
                     username=gns3_junos_vsrx['username'],
                     password=gns3_junos_vsrx['password'],
