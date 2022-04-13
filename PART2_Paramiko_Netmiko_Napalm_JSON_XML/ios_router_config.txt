@@ -1,0 +1,26 @@
+# using csr1000v17.3.3
+username devnet privilege 15 password 0 devnet
+aaa new-model
+aaa authentication login default local
+aaa authorization exec default local
+
+no ip domain-lookup
+ip domain name numancia
+hostname ios_router
+crypto key generate rsa modulus 4096
+ip ssh version 2
+
+netconf-yang
+netconf-yang feature candidate-datastore
+restconf
+ip http secure-server
+
+interface GigabitEthernet1
+ ip address 192.168.122.140 255.255.255.0
+ negotiation auto
+
+line vty 0 98
+ logging synchronous
+ transport input ssh
+ privilege level 15
+

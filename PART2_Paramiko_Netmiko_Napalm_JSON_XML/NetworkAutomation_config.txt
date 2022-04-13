@@ -1,0 +1,11 @@
+# Enable DHCP to receive an IP from NAT Cloud.
+Node Properties -> Network Configuration
+# Enable the following lines:
+auto eth0
+iface eth0 inet dhcp
+
+# Run the following commands to prepare the environment
+apt update
+apt upgrade
+apt install git
+git clone https://github.com/dev-Rhllor/ENCOR_350-401.git

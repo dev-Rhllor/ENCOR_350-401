@@ -1,5 +1,5 @@
 sandbox = {
-    'host': '10.10.20.48',
+    'host': 'sandbox-iosxe-latest-1.cisco.com',
     'device_type': 'cisco_ios',
     'username': 'developer',
     'password': 'C1sco12345',
