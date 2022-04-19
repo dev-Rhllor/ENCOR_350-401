@@ -38,3 +38,29 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - Run it against the junos_vsrx device.
     - Compare outputs. 
 
+# PART 3 Configuring devices using Paramiko/Netmiko/Napalm
+
+2. git-clone or copy the following files in the **Network Automation** device. 
+    - paramiko_config.py
+    - netmiko_config.py
+    - napalm_config.py
+    - inventory.py
+    - interface_config.py
+    - cisco_verification.yml
+3. Open the **paramiko_config.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
+4. Open the **netmiko_config.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
+5. Open the **napalm_config.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
+    - Compare outputs.
+6. Open the **napalm_verify.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
+    - Compare outputs.
+
+
+
