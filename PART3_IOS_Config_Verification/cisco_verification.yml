@@ -1,0 +1,10 @@
+---
+- get_interfaces_ip:
+    Loopback1:
+      ipv4:
+        1.1.1.1:
+          prefix_length: 32
+    Loopback2:
+      ipv4:
+        2.2.2.2:
+          prefix_length: 32

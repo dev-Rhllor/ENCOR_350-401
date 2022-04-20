@@ -1,11 +1,9 @@
 import paramiko
-import re
-# from inventory import gns3_ios_router
+import time
 from inventory import gns3_ios_router
 
 
 def main():
-    command = 'show ip interface brief \n'
 
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -16,21 +14,21 @@ def main():
                 look_for_keys=False,
                 allow_agent=False)
 
-    stdin, stdout, stderr = ssh.exec_command(command)
-    output = stdout.readlines()
-    print(" ".join(output))
+    with open('cisco_config.txt') as file:
+        config_set = file.read().splitlines()
 
-    regex = re.compile('(?P<interface>\S+) +(?P<ip>\S+) +\S+ +\S+ +\S+')
-    result = []
-
-    for line in output:
-        match = regex.search(line)
-        if match:
-            result.append(match.groupdict())
-
-    print(result)
+    interactive_shell = ssh.invoke_shell()
+    interactive_shell.send("config terminal \n")
+    time.sleep(2)
+    for config_line in config_set:
+        print(f"sending {config_line}")
+        command = config_line + '\n'
+        interactive_shell.send(command)
+        output = interactive_shell.recv(65535)
+        print(output)
+        time.sleep(2)
+    
     ssh.close()
-    del ssh, stdin, stdout, stderr
 
 
 if __name__ == "__main__":
