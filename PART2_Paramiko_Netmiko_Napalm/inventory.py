@@ -1,4 +1,4 @@
-gns3_ios_router = {
+sandbox = {
     'host': 'sandbox-iosxe-latest-1.cisco.com',
     'device_type': 'cisco_ios',
     'username': 'developer',
@@ -6,7 +6,7 @@ gns3_ios_router = {
     'port': 22
 }
 
-sandbox = {
+gns3_ios_router = {
     'device_type': 'cisco_ios',
     'host': '192.168.122.140',
     'username': 'devnet',

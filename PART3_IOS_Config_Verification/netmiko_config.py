@@ -9,10 +9,10 @@ def main():
     # device_connection.send_config_from_file('cisco_config.txt')
 
     # Using the "send config set" function
-    with open('./PART3_IOS_Config/cisco_config.txt') as file:
+    with open('cisco_config.txt') as file:
         config_set = file.read().splitlines()
     output = device_connection.send_config_set(config_set)
-    if "^" or "%" in output:
+    if "%" in output:
         print(f"problem in config_set sent \n {output}")
     device_ip_parsed = device_connection.send_command("show ip interface brief", use_textfsm=True)
     print(device_ip_parsed)

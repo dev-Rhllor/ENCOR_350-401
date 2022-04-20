@@ -3,5 +3,5 @@ interface loopback1
  no shutdown
 
 interface loopback2
- ip address 1.1.1.1 255.255.255.255
+ ip address 2.2.2.2 255.255.255.255
  no shutdown

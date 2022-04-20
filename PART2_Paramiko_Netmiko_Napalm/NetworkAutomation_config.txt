@@ -7,5 +7,10 @@ iface eth0 inet dhcp
 # Run the following commands to prepare the environment
 apt update
 apt upgrade
-apt install git
-git clone https://github.com/dev-Rhllor/ENCOR_350-401.git
+apt install unzip
+
+# Download the repo
+curl -L -O https://github.com/dev-Rhllor/ENCOR_350-401/archive/master.zip
+
+# Unzip the repo
+unzip master.zip
