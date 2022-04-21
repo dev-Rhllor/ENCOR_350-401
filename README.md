@@ -3,7 +3,6 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 ## PART 1 Python Crash Course
 
 0. [Optional] IDE Configuration. You can use this [link](https://developer.cisco.com/learning/lab/dev-win/step/1) to prepare your environment.
-
 1. Read the [python first steps](https://realpython.com/python-first-steps/) and:
     - Solve the **python_first_steps_excercises.py**
     - Do all **loop_excercises.py**
