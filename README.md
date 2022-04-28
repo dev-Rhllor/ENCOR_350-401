@@ -57,5 +57,32 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - Run it against the ios_router device.
     - Compare outputs.
 
+# PART 4 XML, JSON, YAML and Ansible
+
+1. Download or copy the following files in the **Network Automation** device.
+    - inventory.xml
+    - inventory.json
+    - inventory.yaml
+    - data_import.py
+2. Open the **inventory.xml** file and:
+    - Identify their building components:
+        - root element
+        - child elemments
+        - attributes
+        - tags
+3. Open the **inventory.json** file and:
+    - Identify their building components:
+        - Objects
+        - Lists
+        - Data Types: String, number, object, array, boolean, Null
+
+4. Open the **inventory.yaml** file and:
+    - Identify their building components:
+        - Objects
+        - Lists
+        - Data Types: String, number, object, array, boolean, Null
+
+
+
 
 

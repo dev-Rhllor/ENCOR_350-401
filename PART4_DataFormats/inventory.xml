@@ -1,0 +1,27 @@
+<?xml version="1.0” encoding="ISO-8859-1"?>
+<devices>
+    <router name="gns3_ios_router">
+        <local>True</local>
+        <device_type>cisco_ios</device_type>
+        <host>192.168.122.140</host>
+        <password>devnet</password>
+        <port>22</port>
+        <username>devnet</username>
+    </router>
+    <router name="gns3_junos_vsrx">
+        <local>True</local>
+        <device_type>juniper_junos</device_type>
+        <host>192.168.122.150</host>
+        <password>Devnet</password>
+        <port>22</port>
+        <username>devnet</username>
+    </router>
+    <router name="sandbox">
+        <local>False</local>
+        <device_type>cisco_ios</device_type>
+        <host>sandbox-iosxe-latest-1.cisco.com</host>
+        <password>C1sco12345</password>
+        <port>22</port>
+        <username>developer</username>
+    </router>
+</devices>

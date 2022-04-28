@@ -1,0 +1,24 @@
+---
+
+devices:
+  sandbox:
+    local: False
+    host: sandbox-iosxe-recomm-1.cisco.com
+    device_type: cisco_ios
+    username: developer
+    passsword: C1sco12345
+    port: 22
+  gns3_ios_router:
+    local: True
+    host: 192.168.122.140
+    device_type: cisco_ios
+    username: devnet
+    passsword: devnet
+    port: 22
+  gns3_junos_vsrx:
+    local: True
+    host: 192.168.122.150
+    device_type: juniper_junos
+    username: devnet
+    passsword: Devnet
+    port: 22
