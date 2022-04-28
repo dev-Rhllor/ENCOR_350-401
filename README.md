@@ -14,7 +14,7 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 ## PART 2 Paramiko vs Netmiko vs Napalm
 
 1. Build the test environment using GNS3 and configure the devices with the initial configuration provided.
-2. git-clone or copy the following files in the **Network Automation** device. 
+2. Download or copy the following files in the **Network Automation** device. 
     - paramiko_show.py
     - netmiko_show.py
     - napalm_show.py
@@ -35,7 +35,7 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 
 # PART 3 Configuring devices using Paramiko/Netmiko/Napalm
 
-1. git-clone or copy the following files in the **Network Automation** device. 
+1. Download or copy the following files in the **Network Automation** device. 
     - paramiko_config.py
     - netmiko_config.py
     - napalm_config.py

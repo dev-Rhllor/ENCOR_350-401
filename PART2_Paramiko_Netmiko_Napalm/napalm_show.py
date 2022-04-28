@@ -1,6 +1,7 @@
 from napalm import get_network_driver
 # from inventory import gns3_junos_vsrx
 from inventory import gns3_ios_router
+from pprint import pprint 
 
 
 def main():
@@ -12,7 +13,7 @@ def main():
 
     device.open()
     interfaces = device.get_interfaces_ip()
-    print(interfaces)
+    pprint(interfaces)
 
 
 if __name__ == "__main__":
