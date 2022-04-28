@@ -1,0 +1,1 @@
+# Here comes some code to import the different inventory files and manipulate them inside python.
