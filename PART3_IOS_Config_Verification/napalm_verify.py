@@ -8,7 +8,7 @@ def main():
                 username=gns3_ios_router['username'],
                 password=gns3_ios_router['password'],
                 optional_args={'port': gns3_ios_router['port']}) as device:
-        result = device.compliance_report('cisco_verification.yml')
+        result = device.compliance_report('cisco_verification.yaml')
         print(result)
 
 if __name__ == "__main__":

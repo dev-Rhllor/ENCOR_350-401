@@ -41,7 +41,7 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - napalm_config.py
     - inventory.py
     - interface_config.py
-    - cisco_verification.yml
+    - cisco_verification.yaml
 3. Open the **paramiko_config.py** script and:
     - Identify their building components.
     - Run it against the ios_router device.
