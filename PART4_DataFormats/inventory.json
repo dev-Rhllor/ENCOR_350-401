@@ -1,6 +1,5 @@
 {
-    "devices": [
-        {
+    "devices": {
         "sandbox": {
             "local": false,
             "host": "sandbox-iosxe-latest-1.cisco.com",
@@ -8,7 +7,7 @@
             "username": "developer",
             "password": "C1sco12345",
             "port": 22
-            },
+        },
         "gns3_ios_router": {
             "local": true,
             "host": "192.168.122.140",
@@ -16,7 +15,7 @@
             "username": "devnet",
             "password": "devnet",
             "port": 22
-            },
+        },
         "gns3_junos_vsrx":{
             "local": true,
             "host": "192.168.122.150",
@@ -24,7 +23,7 @@
             "username": "devnet",
             "password": "Devnet",
             "port": 22
-            }
         }
-    ]
+    }
+    
 }
