@@ -28,6 +28,20 @@ def main():
     print(inventory_from_xml['devices']['sandbox']['local'])
     print(inventory_from_xml['devices']['sandbox']['@id'])
 
+    # Importing from json from strings
+
+    sandbox = """
+    {
+        "local": false,
+        "host": "sandbox-iosxe-latest-1.cisco.com",
+        "device_type": "cisco_ios",
+        "username": "developer",
+        "password": "C1sco12345",
+        "port": 22
+    }
+    """
+    print(json.load(sandbox.read()))
+
 
 if __name__ == "__main__":
     main()
