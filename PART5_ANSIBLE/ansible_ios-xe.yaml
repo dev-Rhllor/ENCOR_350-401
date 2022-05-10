@@ -1,0 +1,51 @@
+---
+
+- name: Gather the interface information using the ios_command module. 
+  hosts: iosxe
+  gather_facts: False
+  tags:
+    - command_cli
+  
+  tasks:
+
+    - name: Gather "show ip interface brief" using ansible ios_command module
+      ios_command:
+        commands: "show ip interface brief"
+      register: cli_result
+
+    - name: Display information as list of strings 
+      debug:
+        msg: "{{cli_result.stdout_lines[0]}}"
+
+
+- name: Gather the interface information using the Ansible Network Collection for Cisco IOS devices. 
+  hosts: iosxe
+  gather_facts: yes
+  tags:
+    - network_collection
+  
+  tasks:
+
+    - name: Display "ansible_net_interface" var as structured data.
+      debug:
+        var: ansible_net_interfaces # There are several other vars in "ios facts" module
+
+- name: Configure the interface loopback using the Ansible Network Collection for Cisco IOS devices. 
+  hosts: iosxe
+  gather_facts: yes
+  tags:
+    - loopback_config
+  
+  tasks:
+
+    - name: Using the ios_l3_interface module
+      cisco.ios.ios_l3_interfaces:
+        config:
+        - name: loopback1
+          ipv4:
+          - address: 10.10.10.10/32
+        - name: loopback2
+          ipv4:
+          - address: 20.20.20.20/32
+        state: merged
+

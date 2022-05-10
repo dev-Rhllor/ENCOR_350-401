@@ -83,3 +83,10 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
         - Lists
         - Data Types: String, number, object, array, boolean, Null
 
+## PART 5 ANSIBLE
+
+1. Gather information using ansible network collection 
+
+2. Gather information using ansible ios_fact module
+
+3. Configure loopbacks
