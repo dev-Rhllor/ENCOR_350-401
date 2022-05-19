@@ -1,51 +1,94 @@
 ---
-
-- name: Gather the interface information using the ios_command module. 
+# Equivalante a send_command de netmiko
+- name: Gather the interface information using the ios_command module of Cisco.Ios collection.
   hosts: iosxe
-  gather_facts: False
   tags:
-    - command_cli
+    - cli_command
   
   tasks:
 
-    - name: Gather "show ip interface brief" using ansible ios_command module
+    - name: Gather "show ip interface brief" using the ios_command module.
       ios_command:
         commands: "show ip interface brief"
       register: cli_result
 
-    - name: Display information as list of strings 
+    - name: Display the return value of the whole command.
       debug:
         msg: "{{cli_result.stdout_lines[0]}}"
 
-
-- name: Gather the interface information using the Ansible Network Collection for Cisco IOS devices. 
+# Esto es equivalante al send_config_set de netmiko y el send_config_from_file o el napalm config.
+- name:  Configure the loopbacks with two different approaches both using the ios_config module of Cisco.Ios collection.
   hosts: iosxe
-  gather_facts: yes
   tags:
-    - network_collection
-  
+    - cli_config
+
   tasks:
 
-    - name: Display "ansible_net_interface" var as structured data.
+    - name: Configure the interfaces importing the configuration from a file.
+      cisco.ios.ios_config:
+        src: cisco_config.txt
+
+    - name: Configure multiple interfaces using a loop.
+      cisco.ios.ios_config:
+        lines:
+        - description Configured with Ansible
+        #- no shutdown
+        parents: '{{ item }}'
+      with_items:
+      - interface Loopback1
+      - interface Loopback2
+# no when clause needed.
+
+- name: Remove the interface loopbacks only if they are present in the device. (Has idempotency).
+  hosts: iosxe
+  tags:
+    - Rollback
+
+  tasks:
+
+    - name: Gather a base set of device facts using the ios_facts module from Cisco.Ios collection.
+      ios_facts:
+        gather_subset: all
+
+    - name: Print the ansible_net_interfaces variable gathered using the ios_facts.
       debug:
-        var: ansible_net_interfaces # There are several other vars in "ios facts" module
+        var: ansible_net_interfaces
+        
+    - name: Check if the interfaces are present in the ansible_net_interfaces variable and remove it using the ios_config module from Cisco.Ios collection.
+      ios_config:
+        commands: "no interface {{ item }}"
+      with_items:
+      - Loopback1
+      - Loopback2
+      when: ansible_net_interfaces["{{item}}"] is defined
 
-- name: Configure the interface loopback using the Ansible Network Collection for Cisco IOS devices. 
+
+# Esto es equivalente a configurar una interfaz Netconf
+- name: Configure the interface loopback using the ios_l3_interface module from Cisco.Ios collection. 
   hosts: iosxe
-  gather_facts: yes
   tags:
-    - loopback_config
+    - module_config
   
   tasks:
 
-    - name: Using the ios_l3_interface module
-      cisco.ios.ios_l3_interfaces:
+    - name: Configure the IP using the ios_l3_interface module.
+      ios_l3_interfaces:
         config:
-        - name: loopback1
+        - name: Loopback1
           ipv4:
           - address: 10.10.10.10/32
-        - name: loopback2
+        - name: Loopback2
           ipv4:
           - address: 20.20.20.20/32
         state: merged
 
+    - name: Configure the description and admin state it using the ios_l3_interface module.
+      ios_interfaces:
+        config:
+        - name: Loopback1
+          description: Configured with Ansible and ios_l3_interface module
+          enabled: true
+        - name: Loopback2
+          description: Configured with Ansible and ios_l3_interface module
+          enabled: true
+        state: merged

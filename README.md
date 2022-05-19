@@ -64,29 +64,48 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - inventory.json
     - inventory.yaml
     - data_import.py
-2. Open the **inventory.xml** file and:
-    - Identify their building components:
-        - XML declaration
-        - root element
-        - child elemments
-        - attributes
-        - tags
-3. Open the **inventory.json** file and:
-    - Identify their building components:
-        - Objects
-        - Lists
-        - Data Types: String, number, object, array, boolean, Null
+2. Open the **inventory.xml** file and identify their building components:
+    - XML declaration
+    - root element
+    - child elemments
+    - attributes
+    - tags
+3. Open the **inventory.json** file and identify their building components:
+    - Objects
+    - Lists
+    - Data Types: String, number, object, array, boolean, Null
 
-4. Open the **inventory.yaml** file and:
-    - Identify their building components:
-        - Objects
-        - Lists
-        - Data Types: String, number, object, array, boolean, Null
+4. Open the **inventory.yaml** file and identify their building components:
+    - Objects
+    - Lists
+    - Data Types: String, number, object, array, boolean, Null
+
+5. Open the **data_importer.py** script and:
+    - Identify their building components.
+    - Run it against the different inventory files types.
+    - Compare outputs.
 
 ## PART 5 ANSIBLE
 
-1. Gather information using ansible network collection 
+1. From the [Ansible Documentation](https://docs.ansible.com/ansible/latest/network/getting_started/index.html) read:
+    - [Basic Concepts](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html)
+    - [Network differences](https://docs.ansible.com/ansible/latest/network/getting_started/network_differences.html)
 
-2. Gather information using ansible ios_fact module
+3. Download or copy the following files in the **Network Automation** device. 
+    - ansible_ios-xe.yaml
+    - ansible.cfg
+    - cisco_config.txt
+    - inventory.yaml
 
-3. Configure loopbacks
+4. Open the **inventory.yaml** file and identify their building componentes:
+    - Hosts.
+    - Variables.
+
+5. Open the **ansible_ios-xe.yaml** playbook and identify their building componentes:
+    - Plays.
+    - Tasks.
+    - Modules.
+    - Tags.
+    - Design Patterns.
+
+4. Run the **ansible_ios-xe.yaml** with and without verbose options. Compare the output.
