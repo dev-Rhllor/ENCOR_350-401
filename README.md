@@ -91,6 +91,8 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - [Basic Concepts](https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html)
     - [Network differences](https://docs.ansible.com/ansible/latest/network/getting_started/network_differences.html)
 
+2. Read and compare the different automation tools from [here](https://ipcisco.com/lesson/ansible-vs-puppet-vs-chef/)
+
 3. Download or copy the following files in the **Network Automation** device. 
     - ansible_ios-xe.yaml
     - ansible.cfg
@@ -108,4 +110,4 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - Tags.
     - Design Patterns.
 
-4. Run the **ansible_ios-xe.yaml** with and without verbose options. Compare the output.
+6. Run the **ansible_ios-xe.yaml** with and without verbose options. Compare the output.
