@@ -25,11 +25,11 @@
   tasks:
 
     - name: Configure the interfaces importing the configuration from a file.
-      cisco.ios.ios_config:
+      ios_config:
         src: cisco_config.txt
 
     - name: Configure multiple interfaces using a loop.
-      cisco.ios.ios_config:
+      ios_config:
         lines:
         - description Configured with Ansible
         #- no shutdown

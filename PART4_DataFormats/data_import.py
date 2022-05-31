@@ -40,7 +40,7 @@ def main():
         "port": 22
     }
     """
-    print(json.load(sandbox.read()))
+    print(json.loads(sandbox))
 
 
 if __name__ == "__main__":
