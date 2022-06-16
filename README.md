@@ -111,3 +111,9 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - Design Patterns.
 
 6. Run the **ansible_ios-xe.yaml** with and without verbose options. Compare the output.
+
+## PART 6 APIs and DNAc.
+
+1. Watch the APIs instroduction from [DEVNET Fundamentals](https://www.youtube.com/watch?v=xHBnfmiMSF4)
+2. Read REST API definition from [Redhat](https://www.redhat.com/en/topics/api/what-is-a-rest-api)
+
