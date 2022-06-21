@@ -1,8 +1,8 @@
-Repository for the ENCOR 350-401 Cisco Certification Exam.
+Repository for ENCOR 350-401 Cisco Certification Exam.
 
 ## PART 1 Python Crash Course
 
-0. [Optional] IDE Configuration. You can use this [link](https://developer.cisco.com/learning/lab/dev-win/step/1) to prepare your environment.
+0. [Optional] IDE Configuration. Use this [link](https://developer.cisco.com/learning/lab/dev-win/step/1) to prepare your environment.
 1. Read the [python first steps](https://realpython.com/python-first-steps/) and:
     - Solve the **python_first_steps_excercises.py**
     - Do all **loop_excercises.py**
@@ -13,8 +13,8 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 
 ## PART 2 Paramiko vs Netmiko vs Napalm
 
-1. Build the test environment using GNS3 and configure the devices with the initial configuration provided.
-2. Download or copy the following files in the **Network Automation** device. 
+1. Build the test environment using GNS3. Configure the devices with the initial configuration provided in this repository.
+2. Download or copy the following files into the **Network Automation** device. 
     - paramiko_show.py
     - netmiko_show.py
     - napalm_show.py
@@ -35,7 +35,7 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 
 ## PART 3 Configuring devices using Paramiko/Netmiko/Napalm
 
-1. Download or copy the following files in the **Network Automation** device. 
+1. Download or copy the following files into the **Network Automation** device. 
     - paramiko_config.py
     - netmiko_config.py
     - napalm_config.py
@@ -59,7 +59,7 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 
 ## PART 4 XML, JSON and YAML
 
-1. Download or copy the following files in the **Network Automation** device.
+1. Download or copy the following files into the **Network Automation** device.
     - inventory.xml
     - inventory.json
     - inventory.yaml
@@ -82,7 +82,7 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 
 5. Open the **data_importer.py** script and:
     - Identify their building components.
-    - Run it against the different inventory files types.
+    - Run it against the different inventory file types.
     - Compare outputs.
 
 ## PART 5 ANSIBLE
@@ -93,7 +93,7 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 
 2. Read and compare the different automation tools from [here](https://ipcisco.com/lesson/ansible-vs-puppet-vs-chef/)
 
-3. Download or copy the following files in the **Network Automation** device. 
+3. Download or copy the following files into the **Network Automation** device. 
     - ansible_ios-xe.yaml
     - ansible.cfg
     - cisco_config.txt
@@ -103,7 +103,7 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
     - Hosts.
     - Variables.
 
-5. Open the **ansible_ios-xe.yaml** playbook and identify their building componentes:
+5. Open the **ansible_ios-xe.yaml** playbook and identify their building components:
     - Plays.
     - Tasks.
     - Modules.
@@ -114,6 +114,42 @@ Repository for the ENCOR 350-401 Cisco Certification Exam.
 
 ## PART 6 APIs and DNAc.
 
-1. Watch the APIs instroduction from [DEVNET Fundamentals](https://www.youtube.com/watch?v=xHBnfmiMSF4)
-2. Read REST API definition from [Redhat](https://www.redhat.com/en/topics/api/what-is-a-rest-api)
+1. Watch the APIs introduction from [DEVNET Fundamentals](https://www.youtube.com/watch?v=xHBnfmiMSF4)
+
+2. Read and understand the release policies of APIs from [Redhat](https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces)
+    - Private
+    - Public
+    - Partner
+
+3. Read REST API definition from [here](https://restfulapi.net/) and understand the *six guiding principles the RESTful architecture*:
+    - Uniform interface
+    - Client–server
+    - Stateless
+    - Cacheable
+    - Layered system
+    - Code on demand (optional)
+
+4. Read HTTP Methods from [here](https://restfulapi.net/http-methods/) and understand the difference between: 
+    - GET
+    - POST
+    - PUT
+    - DELETE
+    - PATCH
+
+5. Read and undestand the HTTP Status Codes from [here](https://restfulapi.net/http-status-codes/)
+    - 1xx: Informational
+    - 2xx: Success
+    - 3xx: Redirection
+    - 4xx: Client Error
+    - 5xx: Server Error
+
+5. Learn about the Cisco DNA Center API Overview with this [DEVNET Learning LAB](https://developer.cisco.com/learning/labs/dne-dnac-api-overview/) and: 
+    - Understand Cisco DNA Center Programmability in the context of DNA.
+    - Understand the five Cisco DNA Center API Domains.
+    - Explore the main starting points for the Cisco DNA Center APIs.
+
+6. Use Postman authenticate into the different following Cisco REST APIs
+    - Cisco DNAC
+    - Cisco SDWAN (vManage)
+    - Cisco IOS-XE using Restconf
 
