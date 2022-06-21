@@ -148,8 +148,8 @@ Repository for ENCOR 350-401 Cisco Certification Exam.
     - Understand the five Cisco DNA Center API Domains.
     - Explore the main starting points for the Cisco DNA Center APIs.
 
-6. Use Postman authenticate into the different following Cisco REST APIs
-    - Cisco DNAC
-    - Cisco SDWAN (vManage)
-    - Cisco IOS-XE using Restconf
+6. Use this [Postman collection](https://www.postman.com/team-rhllor/workspace/cisco-encor-350-401) and authenticate into the different following Cisco REST APIs
+    - Cisco DNAc [Documentation](https://developer.cisco.com/docs/dna-center/#!authentication-and-authorization/basic-authentication)
+    - Cisco SDWAN [Documentation](https://developer.cisco.com/docs/sdwan/#!authentication/how-to-authenticate) 
+    - Cisco IOS-XE using RESTCONF [Documentation](https://developer.cisco.com/docs/ios-xe/#!enabling-restconf-on-ios-xe/authentication)
 
