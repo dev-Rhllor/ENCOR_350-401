@@ -60,7 +60,7 @@
       with_items:
       - Loopback1
       - Loopback2
-      when: ansible_net_interfaces["{{item}}"] is defined
+      when: ansible_net_interfaces["{{ item }}"] is defined
 
 
 # Esto es equivalente a configurar una interfaz Netconf
