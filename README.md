@@ -42,17 +42,17 @@ Repository for ENCOR 350-401 Cisco Certification Exam.
     - inventory.py
     - interface_config.py
     - cisco_verification.yaml
-3. Open the **paramiko_config.py** script and:
+2. Open the **paramiko_config.py** script and:
     - Identify their building components.
     - Run it against the ios_router device.
-4. Open the **netmiko_config.py** script and:
+3. Open the **netmiko_config.py** script and:
     - Identify their building components.
     - Run it against the ios_router device.
-5. Open the **napalm_config.py** script and:
+4. Open the **napalm_config.py** script and:
     - Identify their building components.
     - Run it against the ios_router device.
     - Compare outputs.
-6. Open the **napalm_verify.py** script and:
+5. Open the **napalm_verify.py** script and:
     - Identify their building components.
     - Run it against the ios_router device.
     - Compare outputs.
@@ -143,13 +143,48 @@ Repository for ENCOR 350-401 Cisco Certification Exam.
     - 4xx: Client Error
     - 5xx: Server Error
 
-5. Learn about the Cisco DNA Center API Overview with this [DEVNET Learning LAB](https://developer.cisco.com/learning/labs/dne-dnac-api-overview/) and: 
+6. Learn about the Cisco DNA Center API Overview with this [DEVNET Learning LAB](https://developer.cisco.com/learning/labs/dne-dnac-api-overview/) and: 
     - Understand Cisco DNA Center Programmability in the context of DNA.
     - Understand the five Cisco DNA Center API Domains.
     - Explore the main starting points for the Cisco DNA Center APIs.
 
-6. Use this [Postman collection](https://www.postman.com/team-rhllor/workspace/cisco-encor-350-401) and authenticate into the different following Cisco REST APIs
+7. Use this [Postman collection](https://www.postman.com/team-rhllor/workspace/cisco-encor-350-401) and authenticate into the different following Cisco REST APIs
     - Cisco DNAc [Documentation](https://developer.cisco.com/docs/dna-center/#!authentication-and-authorization/basic-authentication)
     - Cisco SDWAN [Documentation](https://developer.cisco.com/docs/sdwan/#!authentication/how-to-authenticate) 
     - Cisco IOS-XE using RESTCONF [Documentation](https://developer.cisco.com/docs/ios-xe/#!enabling-restconf-on-ios-xe/authentication)
 
+## PART 7 Model Driven Programability (RESTCONF, NETCONF and YANG)
+
+1. Learn about Moder Driven Programability reading the introduction of this [Devnet Learning LAB: MDP - Introduction](https://developer.cisco.com/learning/modules/intro-device-level-interfaces/why-mdp/introduction/)
+
+2. Explore the YANG data model using:
+    - The Python module Pyang following the [Devnet Learning LAB: MDP - Introduction](https://developer.cisco.com/learning/modules/intro-device-level-interfaces/intro-yang/introduction/)
+    - The [Yang Catalog](https://www.yangcatalog.org/home.html)
+
+3. Download or copy the following files into the **Network Automation** device. 
+    - netconf_get.py
+    - restconf_get.py
+    - netconf_edit-config.py
+    - restconf_post.py
+    - netconf_telemetry.py
+    - inventory.py
+
+4. Open the **netconf_get.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
+
+5. Open the **restconf_get.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
+
+6. Open the **netconf_edit-config.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
+
+7. Open the **restconf_post.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
+
+8. Open the **netconf_telemetry.py** script and:
+    - Identify their building components.
+    - Run it against the ios_router device.
