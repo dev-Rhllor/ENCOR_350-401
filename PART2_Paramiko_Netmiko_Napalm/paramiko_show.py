@@ -1,5 +1,5 @@
-import paramiko
 import re
+import paramiko
 from inventory import gns3_ios_router
 
 
@@ -19,7 +19,7 @@ def main():
     output = stdout.readlines()
     print(" ".join(output))
 
-    regex = re.compile('(?P<interface>\S+) +(?P<ip>\S+) +\S+ +\S+ +\S+')
+    regex = re.compile(r'(?P<interface>\S+) +(?P<ip>\S+) +\S+ +\S+ +\S+')
     result = []
 
     for line in output:

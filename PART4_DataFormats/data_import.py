@@ -3,17 +3,17 @@ import yaml
 import xmltodict
 
 def json_importer():
-    with open('./PART4_DataFormats/inventory.json') as file:
+    with open('./PART4_DataFormats/inventory.json', encoding="utf-8") as file:
         inventory = json.load(file)
         return inventory
 
 def yaml_importer():
-    with open('./PART4_DataFormats/inventory.yaml') as file:
+    with open('./PART4_DataFormats/inventory.yaml', encoding="utf-8") as file:
         inventory = yaml.load(file, Loader=yaml.FullLoader)
         return inventory
 
 def xml_importer():
-    with open('./PART4_DataFormats/inventory.xml') as file:
+    with open('./PART4_DataFormats/inventory.xml', encoding="utf-8") as file:
         xml_inventory = file.read()
         inventory = xmltodict.parse(xml_inventory)
         return inventory
@@ -45,7 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-

@@ -1,5 +1,5 @@
 ---
-# Equivalante a send_command de netmiko
+# Equivalent to send_command using netmiko
 - name: Gather the interface information using the ios_command module of Cisco.Ios collection.
   hosts: iosxe
   tags:
@@ -16,7 +16,7 @@
       debug:
         msg: "{{cli_result.stdout_lines[0]}}"
 
-# Esto es equivalante al send_config_set de netmiko y el send_config_from_file o el napalm config.
+# Equivalent to send_config_set of netmiko or send_config_from_file from napalm.
 - name:  Configure the loopbacks with two different approaches both using the ios_config module of Cisco.Ios collection.
   hosts: iosxe
   tags:
@@ -63,7 +63,7 @@
       when: ansible_net_interfaces["{{ item }}"] is defined
 
 
-# Esto es equivalente a configurar una interfaz Netconf
+# Equivalent to configure an interface using NETCONF
 - name: Configure the interface loopback using the ios_l3_interface module from Cisco.Ios collection. 
   hosts: iosxe
   tags:

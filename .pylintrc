@@ -1,0 +1,9 @@
+[MASTER]
+extension-pkg-whitelist=lxml
+max-line-length=240
+disable=
+    C0114, # missing-module-docstring
+    C0115, # missing-class-docstring
+    C0116, # missing-function-docstring
+    C0103, # snake case module
+    E1101, # no-member

@@ -1,11 +1,11 @@
+from pprint import pprint
 from napalm import get_network_driver
 # from inventory import gns3_junos_vsrx
 from inventory import gns3_ios_router
-from pprint import pprint 
 
 
 def main():
-    driver = get_network_driver("ios") # "junos" for Juniper, "ios" for cisco 
+    driver = get_network_driver("ios") # "junos" for Juniper, "ios" for cisco
     device = driver(hostname=gns3_ios_router['host'],
                     username=gns3_ios_router['username'],
                     password=gns3_ios_router['password'],

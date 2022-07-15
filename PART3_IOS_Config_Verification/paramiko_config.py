@@ -1,5 +1,5 @@
-import paramiko
 import time
+import paramiko
 from inventory import gns3_ios_router
 
 
@@ -14,7 +14,7 @@ def main():
                 look_for_keys=False,
                 allow_agent=False)
 
-    with open('cisco_config.txt') as file:
+    with open('cisco_config.txt', encoding="utf-8") as file:
         config_set = file.read().splitlines()
 
     interactive_shell = ssh.invoke_shell()

@@ -1,7 +1,7 @@
+from pprint import pprint
 from netmiko import ConnectHandler
 from inventory import gns3_ios_router
 # from inventory import gns3_junos_vsrx
-from pprint import pprint
 
 
 def main():

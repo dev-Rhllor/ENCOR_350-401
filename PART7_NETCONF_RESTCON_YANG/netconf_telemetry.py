@@ -21,7 +21,7 @@ def main():
             </establish-subscription>
         """
         m.dispatch(fromstring(rpc))
-        
+
         while True:
             sub_data = m.take_notification()
             python_sub_data = xmltodict.parse(sub_data.notification_xml)

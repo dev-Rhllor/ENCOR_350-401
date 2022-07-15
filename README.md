@@ -171,20 +171,20 @@ Repository for ENCOR 350-401 Cisco Certification Exam.
 
 4. Open the **netconf_get.py** script and:
     - Identify their building components.
-    - Run it against the ios_router device.
+    - Run it against the sandbox device.
 
 5. Open the **restconf_get.py** script and:
     - Identify their building components.
-    - Run it against the ios_router device.
+    - Run it against the sandbox device.
 
 6. Open the **netconf_edit-config.py** script and:
     - Identify their building components.
-    - Run it against the ios_router device.
+    - Run it against the sandbox device.
 
 7. Open the **restconf_post.py** script and:
     - Identify their building components.
-    - Run it against the ios_router device.
+    - Run it against the sandbox device.
 
 8. Open the **netconf_telemetry.py** script and:
     - Identify their building components.
-    - Run it against the ios_router device.
+    - Run it against the sandbox device.
