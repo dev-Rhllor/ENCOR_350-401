@@ -2,7 +2,6 @@ import re
 import paramiko
 from inventory import gns3_ios_router
 
-
 def main():
     command = 'show ip interface brief \n'
 
