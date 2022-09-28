@@ -65,20 +65,20 @@ Repository for ENCOR 350-401 Cisco Certification Exam.
     - inventory.yaml
     - data_import.py
 2. Open the **inventory.xml** file and identify their building components:
-    - XML declaration
-    - root element
-    - child elemments
-    - attributes
-    - tags
+    - XML declaration/prolog.
+    - XML Elements and tags.
+        - root element.
+        - child element.
+    - XML Attributes.
 3. Open the **inventory.json** file and identify their building components:
     - Objects
-    - Lists
-    - Data Types: String, number, object, array, boolean, Null
+    - Lists.
+    - Data Types: String, number, object, array, boolean, Null.
 
 4. Open the **inventory.yaml** file and identify their building components:
-    - Objects
-    - Lists
-    - Data Types: String, number, object, array, boolean, Null
+    - Objects.
+    - Lists.
+    - Data Types: String, number, object, array, boolean, Null.
 
 5. Open the **data_importer.py** script and:
     - Identify their building components.
