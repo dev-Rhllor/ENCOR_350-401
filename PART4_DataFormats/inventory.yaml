@@ -1,6 +1,7 @@
 ---
 
 devices:
+# Requires a DNS resolution. 
   sandbox:
     local: False
     host: sandbox-iosxe-recomm-1.cisco.com

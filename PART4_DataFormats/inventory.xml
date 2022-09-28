@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <devices>
-    <gns3_ios_router id="0">
-        <local>True</local>
-        <device_type>cisco_ios</device_type>
-        <host>192.168.122.140</host>
-        <password>devnet</password>
-        <port>22</port>
-        <username>devnet</username>
-    </gns3_ios_router>
-    <gns3_junos_vsrx id="1">
-        <local>True</local>
-        <device_type>juniper_junos</device_type>
-        <host>192.168.122.150</host>
-        <password>Devnet</password>
-        <port>22</port>
-        <username>devnet</username>
-    </gns3_junos_vsrx>
-    <sandbox id="2">
+    <!--Requires a DNS resolution-->
+    <sandbox id="0">
         <local>False</local>
         <device_type>cisco_ios</device_type>
         <host>sandbox-iosxe-latest-1.cisco.com</host>
@@ -24,4 +9,20 @@
         <port>22</port>
         <username>developer</username>
     </sandbox>
+    <gns3_ios_router id="1">
+        <local>True</local>
+        <device_type>cisco_ios</device_type>
+        <host>192.168.122.140</host>
+        <password>devnet</password>
+        <port>22</port>
+        <username>devnet</username>
+    </gns3_ios_router>
+    <gns3_junos_vsrx id="2">
+        <local>True</local>
+        <device_type>juniper_junos</device_type>
+        <host>192.168.122.150</host>
+        <password>Devnet</password>
+        <port>22</port>
+        <username>devnet</username>
+    </gns3_junos_vsrx>
 </devices>
