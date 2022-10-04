@@ -27,7 +27,6 @@ def main():
         output = interactive_shell.recv(65535)
         print(output)
         time.sleep(2)
-    
     ssh.close()
 
 
