@@ -17,7 +17,7 @@ def send_config(rpc,device):
                 m.commit()
                 print('Change done')
         except AssertionError:
-            print('No candidate datastore in the device')
+            print('No candidate datastore in the device please enable with "netconf-yang feature candidate-datastore"')
         except Exception as e:
             print(f'Failed with error {e}')
         finally:
