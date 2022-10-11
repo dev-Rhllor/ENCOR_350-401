@@ -21,9 +21,9 @@ def main():
         interfaces_ietf_dict = xmltodict.parse(interfaces_ietf.data_xml)
         interface_description = interfaces_ietf_dict['data']['interfaces']['interface']['description']
         print(f"Interface description for GigabitEthernet2 is {interface_description}")
-        
+
         # Send a get to retrieve ieft-interfaces oper-status from interface standard yang model.
-             
+
         ## using subtree filter
         netconf_ietf_interfaces_status = """
         <interfaces-state xmlns='urn:ietf:params:xml:ns:yang:ietf-interfaces'>
